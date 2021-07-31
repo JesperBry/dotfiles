@@ -3,6 +3,8 @@ Containing dotfiles and installation setup for Windows and Mac OS
 
 ## Usage
 
+1. Add zsh as default shell and change the .zshrc
+
 ### Windows
 ```
 Run install.bat in admin CMD
