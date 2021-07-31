@@ -19,6 +19,7 @@ PACKAGES=(
     make
     node
     docker
+    pyenv
  # Add list of all the packages you want to install! 
 )
 
@@ -46,6 +47,10 @@ CASKS=(
 
 echo "Installing cask apps..."
 brew install --cask ${CASKS[@]}
+
+# Install python 3 and set to default
+pyenv install 3.9.6
+pyenv global 3.9.6
 
 # any additional steps you want to add here
 
