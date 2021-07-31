@@ -17,7 +17,7 @@ Run install.sh as
 1. Make sure terminal has zsh
 2. (Run from root dir) ```$ nano .zshrc```
 3. Add code from dotfile (.zshrc)
-4. click: Control O
-5. press: ENTER
-6. click: Control X
+4. click: ```Ctrl O```
+5. press: ```ENTER```
+6. click: ```Ctrl X```
 7. Restart terminal
