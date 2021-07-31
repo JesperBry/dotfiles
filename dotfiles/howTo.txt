@@ -1,0 +1,9 @@
+How to add .zshrc 
+
+1. Make sure terminal has zsh
+2. (Run from root dir) $ nano .zshrc
+3. Add code from dotfile
+4. click: Control O
+5. press: ENTER
+6. click: Control X
+7. Restart terminal
