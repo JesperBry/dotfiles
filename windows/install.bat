@@ -22,6 +22,7 @@ choco install vlc -y
 choco install postman -y
 choco install 7zip -y
 choco install powertoys -y
+choco install gsudo -y
 
 echo "Windows setup completed!"
 pause
