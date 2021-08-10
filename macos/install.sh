@@ -44,6 +44,7 @@ CASKS=(
     postman
     rectangle
     scroll-reverser
+    docker
 )
 
 echo "Installing cask apps..."
