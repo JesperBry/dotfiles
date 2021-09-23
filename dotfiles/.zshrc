@@ -16,4 +16,4 @@ fi
 alias cls=clear
 alias home=cd ~
 alias reload='exec zsh'
-alias ls='ls -p'
+alias ls='ls -p -G'
