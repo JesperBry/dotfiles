@@ -45,6 +45,8 @@ CASKS=(
     rectangle
     scroll-reverser
     docker
+    microsoft-teams
+    gray
 )
 
 echo "Installing cask apps..."
