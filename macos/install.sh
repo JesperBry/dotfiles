@@ -47,6 +47,7 @@ CASKS=(
     docker
     microsoft-teams
     gray
+    iterm2
 )
 
 echo "Installing cask apps..."
