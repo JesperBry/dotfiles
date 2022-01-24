@@ -25,16 +25,28 @@ Run install.sh as
 7. Restart terminal
 
 # Google Chrome
+
 ColorZilla: https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en
+
 Cookie-Editor: https://chrome.google.com/webstore/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm?hl=en
+
 Code Beautifier: https://chrome.google.com/webstore/detail/javascript-and-css-code-b/iiglodndmmefofehaibmaignglbpdald?hl=en
+
 JSON Viewer: https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
+
 QR Code Generator: https://chrome.google.com/webstore/detail/qr-code-generator/afpbjjgbdimpioenaedcjgkaigggcdpp?hl=en
+
 React Developer Tools: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
+
 Redux DevTools: https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en
+
 Video Popout: https://chrome.google.com/webstore/detail/video-popout/lomlmaamgdjplnhhgnoajlbnlgnpkobl?hl=en
+
 WhatFont: https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en
 
-Chrome Theme:
+
+## Chrome Theme:
+
 Elementary freya dark: https://chrome.google.com/webstore/detail/elementary-freya-dark/lcmjgikfofdpfddimlpihnncnpdmlppl
+
 Startpage: https://github.com/JesperBry/chrome_extension_simple-tab
