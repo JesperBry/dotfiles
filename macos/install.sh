@@ -48,6 +48,7 @@ CASKS=(
     microsoft-teams
     gray
     iterm2
+    alt-tab
 )
 
 echo "Installing cask apps..."
