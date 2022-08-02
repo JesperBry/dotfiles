@@ -20,6 +20,7 @@ PACKAGES=(
     node
     docker
     pyenv
+    mas
 )
 
 echo "Installing packages..."
@@ -59,6 +60,11 @@ pyenv install 3.9.6
 pyenv global 3.9.6
 
 # any additional steps you want to add here
+
+# Install MAC OS apps
+echo "Installing MAC OS apps..."
+# Amphetamine
+mas install 937984704
 
 #Installing nvm (node version manager) https://github.com/nvm-sh/nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | zsh
