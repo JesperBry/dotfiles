@@ -1,3 +1,5 @@
+PROJECT_DIR=~/projects
+
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
@@ -20,6 +22,7 @@ alias cls=clear
 alias home=cd ~
 alias reload='exec zsh'
 alias ls='ls -p -G'
+alias p='target=$(find "$PROJECT_DIR" -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | fzf --preview "ls -A $PROJECT_DIR/{}"); if [ "$target" != "" ]; then code "$PROJECT_DIR/$target" && cd "$PROJECT_DIR/$target"; fi'
 
 # place this after nvm initialization!
 autoload -U add-zsh-hook
