@@ -21,6 +21,8 @@ PACKAGES=(
     docker
     pyenv
     mas
+    fzf
+    findutils
 )
 
 echo "Installing packages..."
@@ -56,8 +58,8 @@ echo "Installing cask apps..."
 brew install --cask ${CASKS[@]}
 
 # Install python 3 and set to default
-pyenv install 3.9.6
-pyenv global 3.9.6
+pyenv install 3.11.0
+pyenv global 3.11.0
 
 # any additional steps you want to add here
 
