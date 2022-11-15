@@ -23,12 +23,18 @@ PACKAGES=(
     mas
     fzf
     findutils
+    antigen
+    starship
 )
 
 echo "Installing packages..."
 brew install ${PACKAGES[@]}
 
 # any additional steps you want to add here
+
+echo "Install Nerd Fonts"
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font 
 
 # Install Mongodb
 brew tap mongodb/brew
