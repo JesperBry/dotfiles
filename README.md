@@ -23,7 +23,7 @@ Run install.sh as
 5. press: ```ENTER```
 6. click: ```Ctrl X```
 7. **Add starship.toml**
-8. ´´´cd ~/.config
+8. ```cd ~/.config```
 9. Add starship.toml
 10. Restart terminal
 
