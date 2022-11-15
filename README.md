@@ -22,7 +22,10 @@ Run install.sh as
 4. click: ```Ctrl O```
 5. press: ```ENTER```
 6. click: ```Ctrl X```
-7. Restart terminal
+7. **Add starship.toml**
+8. ´´´cd ~/.config
+9. Add starship.toml
+10. Restart terminal
 
 # Google Chrome
 
