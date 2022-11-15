@@ -1,3 +1,5 @@
+source /usr/local/Cellar/antigen/2.2.3/share/antigen/antigen.zsh
+
 PROJECT_DIR=~/projects
 
 parse_git_branch() {
@@ -44,3 +46,13 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+# Plugins
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Tell Antigen that you're done.
+antigen apply
+
+# Apply starship
+eval "$(starship init zsh)"
