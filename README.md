@@ -27,6 +27,9 @@ Run install.sh as
 9. Add starship.toml
 10. Restart terminal
 
+### Add default profile to iterm2
+Import Default.json to iterm2
+
 # Google Chrome
 
 ColorZilla: https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en
