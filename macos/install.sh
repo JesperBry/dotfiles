@@ -58,6 +58,7 @@ CASKS=(
     gray
     iterm2
     alt-tab
+    onedrive
 )
 
 echo "Installing cask apps..."
