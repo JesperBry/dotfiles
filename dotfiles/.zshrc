@@ -2,6 +2,11 @@ source /usr/local/Cellar/antigen/2.2.3/share/antigen/antigen.zsh
 
 PROJECT_DIR=~/projects
 
+# fzf configs
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf-alias.zsh ] && source ~/.fzf-alias.zsh
+bindkey "ç" fzf-cd-widget
+
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }

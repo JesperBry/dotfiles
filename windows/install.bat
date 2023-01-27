@@ -14,8 +14,8 @@ choco install yarn -y
 choco install vscode -y
 choco install googlechrome -y
 choco install python -y
-choco install mongodb -y
-choco install mysql -y
+::choco install mongodb -y
+::choco install mysql -y
 choco install slack -y
 choco install spotify -y
 choco install vlc -y
@@ -24,6 +24,11 @@ choco install 7zip -y
 choco install powertoys -y
 choco install gsudo -y
 choco install nvm -y
+choco install fzf -y
+
+echo "Git config and setup"
+git config --global user.name "JesperBry"
+git config --global user.email "jesper_bry@hotmail.com"
 
 echo "Windows setup completed!"
 pause
