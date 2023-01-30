@@ -28,6 +28,7 @@ PACKAGES=(
     findutils
     antigen
     starship
+    bat
 )
 
 echo "\nInstalling packages..."
