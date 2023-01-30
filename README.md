@@ -20,7 +20,7 @@ Run install.sh as
 
 ### Dotfiles
 
-1. Make sure terminal has zsh
+1. Make sure terminal has zsh `$ zsh --version` or run `$ sh install-zsh.sh` (will set as default shell).
 2. Run `cd dotfiles/ && sh install.sh`
 
    **or manual install by**
