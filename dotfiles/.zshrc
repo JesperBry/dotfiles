@@ -7,6 +7,9 @@ PROJECT_DIR=~/projects
 [ -f ~/.fzf-alias.zsh ] && source ~/.fzf-alias.zsh
 bindkey "ç" fzf-cd-widget
 
+# bat configs
+[ -f ~/.bat-alias.zsh ] && source ~/.bat-alias.zsh
+
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
@@ -25,6 +28,7 @@ fi
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
+alias cat='bat --paging=never'
 alias cls=clear
 alias home=cd ~
 alias reload='exec zsh'
