@@ -3,9 +3,12 @@ GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
 # ---- fzf -----
+export FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git -o -name .vscode \) -prune -o -print'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 # Preview file content using bat (https://github.com/sharkdp/bat)
 export FZF_CTRL_T_OPTS="
-  --preview 'bat -n --color=always {}'
+  --no-height --preview 'bat -n --color=always {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
 # ---- Docker -----
@@ -34,4 +37,11 @@ dci() {
 # Remove given containers
 dcrm() {
   docker ps -a | sed '1d' | fzf -m | awk '{print $1}' | xargs docker rm
+}
+
+# ---- Git -----
+
+# Change branch
+gb() {
+  git branch | fzf --height 40% | awk '{print $1}' | xargs git checkout
 }

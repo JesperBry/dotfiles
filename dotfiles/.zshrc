@@ -14,6 +14,11 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
+trash() {
+  echo "Moving files to Trash can..."
+  mv "$@" "$HOME/.trash"
+}
+
 NEWLINE=$'\n'
 setopt PROMPT_SUBST
 PROMPT='%n %9c%{%F{yellow}%}$(parse_git_branch)%{%F{242m}%} ${NEWLINE}$ '
