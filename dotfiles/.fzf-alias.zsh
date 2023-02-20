@@ -16,9 +16,9 @@ export FZF_CTRL_T_OPTS="
 # Stop/Start given containers
 dcs() {
   if [ $1 = "start" ]; then
-      docker ps -a | sed '1d' | fzf -m | awk '{print $1}' | xargs docker start
+      docker ps -a | sed '1d' | fzf -m --height 40% | awk '{print $1}' | xargs docker start
   elif [ $1 = "stop" ]; then
-      docker ps -a | sed '1d' | fzf -m | awk '{print $1}' | xargs docker stop
+      docker ps -a | sed '1d' | fzf -m --height 40% | awk '{print $1}' | xargs docker stop
   else
      echo "\nMissing argument: ${RED}start${NC} or ${RED}stop${NC}"
   fi
@@ -26,17 +26,17 @@ dcs() {
 
 # Log given container
 dcl() {
-  docker ps -a | sed '1d' | fzf | awk '{print $1}' | xargs docker logs
+  docker ps -a | sed '1d' | fzf --height 40% | awk '{print $1}' | xargs docker logs --follow
 }
 
 # Inspect given container
 dci() {
-  docker ps -a | sed '1d' | fzf | awk '{print $1}' | xargs docker inspect
+  docker ps -a | sed '1d' | fzf --height 40% | awk '{print $1}' | xargs docker inspect
 }
 
 # Remove given containers
 dcrm() {
-  docker ps -a | sed '1d' | fzf -m | awk '{print $1}' | xargs docker rm
+  docker ps -a | sed '1d' | fzf -m --height 40% | awk '{print $1}' | xargs docker rm
 }
 
 # ---- Git -----
