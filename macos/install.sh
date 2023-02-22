@@ -29,6 +29,7 @@ PACKAGES=(
     antigen
     starship
     bat
+    nano
 )
 
 echo "\nInstalling packages..."
