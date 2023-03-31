@@ -39,7 +39,7 @@ alias home=cd ~
 alias reload='exec zsh'
 alias ls='ls -p -G'
 alias p='target=$(find "$PROJECT_DIR" -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | fzf --preview "ls -A $PROJECT_DIR/{}"); if [ "$target" != "" ]; then code "$PROJECT_DIR/$target" && cd "$PROJECT_DIR/$target"; fi'
-alias repo='open https://github.com/$(git config user.name)/$(basename `git rev-parse --show-toplevel`)'
+alias repo='gh repo view --web'
 
 # place this after nvm initialization!
 autoload -U add-zsh-hook

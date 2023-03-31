@@ -30,6 +30,7 @@ PACKAGES=(
     starship
     bat
     nano
+    gh
 )
 
 echo "\nInstalling packages..."
