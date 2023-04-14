@@ -86,3 +86,10 @@ gl() {
   # piping them
   $gitlog | $fzf
 }
+
+# ---- GitHub -----
+
+# find and view gh gists
+gist() {
+  gh gist list | fzf | awk '{print $1}' | xargs gh gist view
+}
