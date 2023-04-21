@@ -31,6 +31,7 @@ PACKAGES=(
     bat
     nano
     gh
+    docker-compose
 )
 
 echo "\nInstalling packages..."
@@ -65,6 +66,7 @@ CASKS=(
     iterm2
     alt-tab
     onedrive
+    ngrok
 )
 
 echo "\nInstalling cask apps..."
