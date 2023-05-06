@@ -16,61 +16,11 @@ fi
 # Update homebrew recipes
 brew update
 
-# Brew packages
-PACKAGES=(
-    git
-    make
-    node
-    docker
-    pyenv
-    mas
-    fzf
-    findutils
-    antigen
-    starship
-    bat
-    nano
-    gh
-    docker-compose
-)
+# Get Brewfile from github
+cd $HOME && curl https://raw.githubusercontent.com/JesperBry/dotfiles/main/macos/Brewfile --output Brewfile
 
 echo "\nInstalling packages..."
-brew install ${PACKAGES[@]}
-
-# any additional steps you want to add here
-
-echo "\nInstall Nerd Fonts"
-brew tap homebrew/cask-fonts
-brew install --cask font-hack-nerd-font 
-
-# Install Mongodb
-# brew tap mongodb/brew
-# brew tap | grep mongodb
-# brew install mongodb-community@5.0
-
-# Installing Casks
-echo "\nInstalling cask..."
-
-CASKS=(
-    slack
-    spotify
-    visual-studio-code
-    google-chrome
-    vlc
-    postman
-    rectangle
-    scroll-reverser
-    docker
-    microsoft-teams
-    gray
-    iterm2
-    alt-tab
-    onedrive
-    ngrok
-)
-
-echo "\nInstalling cask apps..."
-brew install --cask ${CASKS[@]}
+brew bundle
 
 # Install python 3 and set to default
 pyenv install 3.11.0
