@@ -48,6 +48,7 @@ echo "\nGit config and setup"
 git config --global user.name "JesperBry"
 git config --global user.email "jesper_bry@hotmail.com"
 git config --global credential.helper osxkeychain
+git config --global init.defaultBranch main
 
 echo "\n${GREEN}Macbook setup completed!${NC}"
 

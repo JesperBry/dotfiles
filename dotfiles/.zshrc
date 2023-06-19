@@ -1,5 +1,7 @@
 source /usr/local/Cellar/antigen/2.2.3/share/antigen/antigen.zsh
 
+autoload -Uz compinit && compinit
+
 PROJECT_DIR=~/projects
 
 # fzf configs
@@ -10,18 +12,10 @@ bindkey "ç" fzf-cd-widget
 # bat configs
 [ -f ~/.bat-alias.zsh ] && source ~/.bat-alias.zsh
 
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
 trash() {
   echo "Moving files to Trash can..."
   mv "$@" "$HOME/.trash"
 }
-
-NEWLINE=$'\n'
-setopt PROMPT_SUBST
-PROMPT='%n %9c%{%F{yellow}%}$(parse_git_branch)%{%F{242m}%} ${NEWLINE}$ '
 
 # Add "code ." as command in PATH
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
