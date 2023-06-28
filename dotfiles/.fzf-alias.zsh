@@ -46,6 +46,10 @@ gb() {
   git branch | fzf --height 40% | awk '{print $1}' | xargs git checkout
 }
 
+gbd() {
+  git branch | fzf | awk '{print $1}' | xargs git branch -d
+}
+
 # git log show with fzf
 gl() {
 
