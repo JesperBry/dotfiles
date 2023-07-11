@@ -40,28 +40,13 @@ alias p='target=$(find "$PROJECT_DIR" -mindepth 1 -maxdepth 1 -type d -exec base
 alias repo='gh repo view --web'
 alias ip='echo Local ip: $(getLocalIP) && echo Public ip: $(getPublicIP)'
 
-# place this after nvm initialization!
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    nvm use default --silent
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
+# Add ngrok completions
+if command -v ngrok &>/dev/null; then
+    eval "$(ngrok completion)"
+fi
 
 # Plugins
+antigen bundle JesperBry/zsh-nvm-checker --branch=main
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
