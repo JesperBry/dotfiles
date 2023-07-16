@@ -7,5 +7,6 @@ cp ./.fzf-alias.zsh ~/
 cp ./.bat-alias.zsh ~/
 cp ./starship.toml ~/.config/
 cp ./.nanorc ~/
+cp ./.gitconfig ~/
 
 echo "\n${GREEN}Dotfiles installed!${NC}"

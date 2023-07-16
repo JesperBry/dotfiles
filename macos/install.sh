@@ -44,12 +44,6 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 
-echo "\nGit config and setup"
-git config --global user.name "JesperBry"
-git config --global user.email "jesper_bry@hotmail.com"
-git config --global credential.helper osxkeychain
-git config --global init.defaultBranch main
-
 echo "\n${GREEN}Macbook setup completed!${NC}"
 
 echo "\nInstalling fzf and key bindings"

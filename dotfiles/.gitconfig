@@ -1,0 +1,7 @@
+[user]
+	name = JesperBry
+	email = jesper_bry@hotmail.com
+[credential]
+	helper = osxkeychain
+[init]
+	defaultBranch = main
