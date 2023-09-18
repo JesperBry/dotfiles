@@ -41,9 +41,13 @@ dcrm() {
 
 # ---- Git -----
 
-# Change branch
+# Change branch (latest first)
 gb() {
-  git branch | fzf --height 40% | awk '{print $1}' | xargs git checkout
+    local branches branch
+    branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)") &&
+    branch=$(echo "$branches" |
+             fzf --height 40% -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+    git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
 
 gbd() {
