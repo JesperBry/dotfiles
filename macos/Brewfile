@@ -17,6 +17,7 @@ brew "node"
 brew "pyenv"
 brew "starship"
 brew "docker-compose"
+brew "go-task"
 
 cask "slack"
 cask "alt-tab"
