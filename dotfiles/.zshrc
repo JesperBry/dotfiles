@@ -39,6 +39,8 @@ alias ls='ls -p -G'
 alias p='target=$(find "$PROJECT_DIR" -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | fzf --preview "ls -A $PROJECT_DIR/{}"); if [ "$target" != "" ]; then code "$PROJECT_DIR/$target" && cd "$PROJECT_DIR/$target"; fi'
 alias repo='gh repo view --web'
 alias ip='echo Local ip: $(getLocalIP) && echo Public ip: $(getPublicIP)'
+alias qr='qrencode -m 2 -t utf8 <<< "$1"'
+alias preview='qlmanage -px <<< "$1"'
 
 # Add ngrok completions
 if command -v ngrok &>/dev/null; then
