@@ -12,16 +12,8 @@ export FZF_CTRL_T_OPTS="
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
 # ---- Docker -----
-
-# Stop/Start given containers
-dcs() {
-  if [ $1 = "start" ]; then
-      docker ps -a | sed '1d' | fzf -m --height 40% | awk '{print $1}' | xargs docker start
-  elif [ $1 = "stop" ]; then
-      docker ps -a | sed '1d' | fzf -m --height 40% | awk '{print $1}' | xargs docker stop
-  else
-     echo "\nMissing argument: ${RED}start${NC} or ${RED}stop${NC}"
-  fi
+dc() {
+  docker ps -a | sed '1d' | fzf -m --height 40% | awk '{print $1}' | xargs docker $1
 }
 
 # Log given container
@@ -52,6 +44,11 @@ gb() {
 
 gbd() {
   git branch | fzf | awk '{print $1}' | xargs git branch -d
+}
+
+gd() {
+  preview="git diff $@ --color=always -- {-1}"
+  git diff $@ --name-only | fzf -m --ansi --preview $preview
 }
 
 # git log show with fzf
