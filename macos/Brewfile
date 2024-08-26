@@ -20,6 +20,7 @@ brew "docker-compose"
 brew "go-task"
 brew "qrencode"
 brew "gnupg"
+brew "jq"
 
 cask "slack"
 cask "alt-tab"
