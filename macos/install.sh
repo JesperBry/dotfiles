@@ -23,19 +23,13 @@ echo "\nInstalling packages..."
 brew bundle
 
 # Install python 3 and set to default
-pyenv install 3.11.0
-pyenv global 3.11.0
+pyenv install 3.13.1
+pyenv global 3.13.1
 
 # any additional steps you want to add here
 
-# Install MAC OS apps
-echo "\nInstalling MAC OS apps..."
-# Amphetamine
-mas install 937984704
-
-echo "\nInstalling nvm"
-#Installing nvm (node version manager) https://github.com/nvm-sh/nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | zsh
+# Install rosetta
+softwareupdate --install-rosetta --agree-to-license
 
 echo "\nSetup MAC OS"
 # MAC OS settings setup

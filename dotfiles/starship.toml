@@ -6,17 +6,23 @@ $git_branch\
 $git_state\
 $git_status\
 $git_metrics\
+$nodejs\
+$fill\
+$cmd_duration\
 $line_break\
 $character"""
 
+[fill]
+symbol = " "
+
 [username]
-style_user = "bright-gray"
+style_user = "gray"
 format = "[$user]($style) "
 disabled = false
 show_always = true
 
 [directory]
-style = "bright-gray"
+style = "gray"
 read_only = ""
 truncation_length = 4
 truncate_to_repo = false
@@ -43,3 +49,13 @@ disabled = true
 
 [git_metrics]
 disabled = true
+
+[nodejs]
+format = '[\($version\)](cyan) '
+disabled = true
+
+# Output the command duration if over 2 seconds
+[cmd_duration]
+min_time = 2_000
+format = "[ $duration ]($style)"
+style = "bright-black"
