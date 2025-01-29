@@ -13,6 +13,15 @@ if test ! $(which brew); then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+if ! command -v brew &> /dev/null; then
+    echo "zsh: command not found: brew"
+else
+    echo "Trying to add brew to PATH"
+    echo >> /Users/$USER/.zprofile
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$USER/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # Update homebrew recipes
 brew update
 
@@ -42,3 +51,9 @@ echo "\n${GREEN}Macbook setup completed!${NC}"
 
 echo "\nInstalling fzf and key bindings"
 $(brew --prefix)/opt/fzf/install
+
+echo "\nInstall and set-up Dotfiles"
+cd ..
+cd dotfiles && sh ./install.sh
+
+echo "\n${GREEN}Dotfiles completed!${NC}"
