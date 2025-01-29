@@ -5,6 +5,7 @@ window-theme = dark
 window-padding-x = 10
 window-padding-y = 10
 cursor-style = bar
+window-save-state = always
 
 # Font
 font-size = 15
@@ -14,8 +15,7 @@ font-family = Hack Nerd Font Mono
 background = 2d2d2d
 foreground = cccccc
 
-selection-background = 515151
-selection-foreground = 2d2d2d
+selection-invert-fg-bg = true
 
 palette = 0=#2d2d2d
 palette = 1=#ff7f7b
