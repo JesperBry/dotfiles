@@ -22,14 +22,22 @@ else
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Update homebrew recipes
-brew update
+output=$(brew doctor)
+if echo "$output" | grep -q "Your system is ready to brew"; then
+    echo "\n${GREEN}System is ready to brew${NC}"
 
-# Get Brewfile from github
-cd $HOME && curl https://raw.githubusercontent.com/JesperBry/dotfiles/main/macos/Brewfile --output Brewfile
+    # Update homebrew recipes
+    brew update
 
-echo "\nInstalling packages..."
-brew bundle
+    # Get Brewfile from github
+    cd $HOME && curl https://raw.githubusercontent.com/JesperBry/dotfiles/main/macos/Brewfile --output Brewfile
+
+    echo "\nInstalling packages..."
+    brew bundle
+else
+    echo "\n${RED}There are issues with your Homebrew setup. Please resolve them first.${NC}"
+    exit 1
+fi
 
 # Install python 3 and set to default
 pyenv install 3.13.1
@@ -47,13 +55,11 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 
-echo "\n${GREEN}Macbook setup completed!${NC}"
+cd $HOME && mkdir Projects
+cd ./Projects && mkdir Private_projects
+cd $HOME
 
 echo "\nInstalling fzf and key bindings"
 $(brew --prefix)/opt/fzf/install
 
-echo "\nInstall and set-up Dotfiles"
-cd ..
-cd dotfiles && sh ./install.sh
-
-echo "\n${GREEN}Dotfiles completed!${NC}"
+echo "\n${GREEN}Macbook Pro setup completed!${NC}"

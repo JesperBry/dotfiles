@@ -1,4 +1,4 @@
-source /usr/local/Cellar/antigen/2.2.3/share/antigen/antigen.zsh
+source $HOMEBREW_PREFIX/share/antigen/antigen.zsh
 
 autoload -Uz compinit && compinit
 
