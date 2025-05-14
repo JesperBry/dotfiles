@@ -23,6 +23,7 @@ brew "pyenv"
 brew "qrencode"
 brew "starship"
 brew "hashicorp/tap/terraform"
+brew "pinentry-mac"
 
 cask "alt-tab"
 cask "firefox"
@@ -40,7 +41,6 @@ cask "slack"
 cask "spotify"
 cask "visual-studio-code"
 cask "gray"
-cask "gpg-suite-no-mail"
 
 mas "Amphetamine", id: 937984704
 mas "Microsoft Outlook", id: 985367838
