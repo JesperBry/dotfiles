@@ -12,3 +12,5 @@
         conflictStyle = zdiff3
 [push]
         autoSetupRemote = true
+[gpg]
+        program = gpg

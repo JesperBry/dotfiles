@@ -59,6 +59,9 @@ cd $HOME && mkdir Projects
 cd ./Projects && mkdir Private_projects
 cd $HOME
 
+echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
+killall gpg-agent
+
 echo "\nInstalling fzf and key bindings"
 $(brew --prefix)/opt/fzf/install
 
