@@ -12,5 +12,13 @@
         conflictStyle = zdiff3
 [push]
         autoSetupRemote = true
+[commit]
+        gpgsign = true
+[tag]
+        gpgSign = true
 [gpg]
         program = gpg
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
