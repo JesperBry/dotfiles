@@ -2,7 +2,7 @@ source $HOMEBREW_PREFIX/share/antigen/antigen.zsh
 
 autoload -Uz compinit && compinit
 
-PROJECT_DIR=~/Projects
+PROJECT_DIR="$HOME/Projects"
 
 # fzf configs
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -30,9 +30,9 @@ getPublicIP() { dig +short myip.opendns.com @resolver1.opendns.com }
 
 # Alias
 alias cat='bat --paging=never'
-alias cls=clear
-alias home=cd ~
-alias dev='cd ~/Projects'
+alias cls='clear'
+alias home="cd $HOME"
+alias dev="cd $HOME/Projects"
 alias reload='exec zsh'
 alias ls='ls -p -G -a'
 alias p='target=$(find "$PROJECT_DIR" -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | fzf --preview "ls -A $PROJECT_DIR/{}"); if [ "$target" != "" ]; then code "$PROJECT_DIR/$target" && cd "$PROJECT_DIR/$target"; fi'
@@ -41,6 +41,7 @@ alias repo='gh repo view --web'
 alias ip='echo Local ip: $(getLocalIP) && echo Public ip: $(getPublicIP)'
 alias qr='qrencode -m 2 -t utf8 <<< "$1"'
 alias preview='qlmanage -px <<< "$1"'
+alias ts='tailscale'
 
 # Add ngrok completions
 if command -v ngrok &>/dev/null; then
